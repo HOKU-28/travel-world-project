@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Lapland Finland</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">Lapland Finland</div>
+    <button class="nav-toggle" id="navToggle">☰</button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="index.html#wisata">Wisata</a></li>
+      <li><a href="index.html#galeri">Galeri</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="register.html">Register</a></li>
+    </ul>
+  </nav>
+
+  <main class="auth-page">
+    <div class="auth-card">
+      <h2>Login</h2>
+      <p class="auth-info">Masuk ke akun Lapland-mu.</p>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+        </div>
+        <button type="submit" class="btn-primary">Masuk</button>
+        <p class="auth-switch">Belum punya akun? <a href="register.html">Register</a></p>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Lapland Finland. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

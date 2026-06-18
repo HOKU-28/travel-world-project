@@ -1,0 +1,28 @@
+name: Show Workflows
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  list-workflows:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: List all workflow files
+        run: |
+          echo "=== Workflow files in this repository ==="
+          find .github/workflows -type f \( -name "*.yml" -o -name "*.yaml" \) | sort
+
+      - name: Show workflow contents
+        run: |
+          echo "=== Contents of workflow files ==="
+          for file in .github/workflows/*.yml .github/workflows/*.yaml; do
+            if [ -f "$file" ]; then
+              echo ""
+              echo "===== $file ====="
+              cat "$file"
+            fi
+          done
